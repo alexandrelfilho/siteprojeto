@@ -1,0 +1,193 @@
+/* Reset básico */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Adiciona um pseudo-elemento para a imagem de fundo com opacidade */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('triviumfundo.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0.5; /* Define a opacidade da imagem de fundo para 50% */
+    z-index: -1; /* Garante que o pseudo-elemento fique atrás do conteúdo */
+}
+
+/* Estilização do corpo */
+body {
+    font-family: 'Open Sans', sans-serif; /* Fonte geral */
+    line-height: 1.6;
+    color: #333;
+    background-color: rgba(240, 240, 240, 0.8); /* Cor de fundo adicional com opacidade de 80% */
+    font-size: 16px; /* Tamanho da fonte global ajustado para ser um pouco menor */
+    scroll-behavior: smooth; /* Adiciona rolagem suave */
+}
+
+/* Estilização do cabeçalho */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(84, 84, 255, 0.349); /* Cor de fundo do cabeçalho */
+    color: #fff;
+    position: fixed; /* Fixar o cabeçalho no topo da tela */
+    width: 100%; /* Largura total da tela */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Garante que o cabeçalho fique sobre outros elementos */
+    backdrop-filter: blur(5px); /* Adiciona um efeito de desfoque no fundo do cabeçalho */
+}
+
+.sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    width: 100%; /* Largura total para garantir que os itens fiquem centralizados */
+    padding: 5px 0; /* Reduz o padding para um cabeçalho mais fino */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+}
+
+.sidebar ul li {
+    margin: 0 15px; /* Espaçamento maior entre os links */
+}
+
+.sidebar ul li a {
+    color: #fff; /* Cor branca dos links */
+    text-decoration: none;
+    padding: 1em;
+    font-size: 1em; /* Tamanho da fonte ajustado */
+    font-weight: bold; /* Fonte em negrito */
+    transition: transform 0.3s ease, color 0.3s ease; /* Efeito suave de transformação e cor */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Adiciona sombra ao texto do cabeçalho */
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+    transform: scale(1.1); /* Aumenta o tamanho do link ao passar o mouse */
+}
+
+/* Estilização da logo e slogan */
+.top-logo {
+    display: flex;
+    flex-direction: column; /* Adiciona o slogan abaixo da logo */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    padding: 70px 0 20px; /* Adiciona espaço abaixo da logo */
+    background: none; /* Remove o fundo da barra */
+}
+
+.top-logo img {
+    height: auto; /* Mantém a proporção da imagem */
+    max-height: 288px; /* Reduz o tamanho máximo da logo para 20% menor */
+    width: auto; /* Ajusta a largura automaticamente para manter a proporção */
+    border-radius: 50%; /* Adiciona borda circular à logo */
+    border: 5px solid #fff; /* Adiciona uma borda branca à logo */
+    transition: transform 0.3s ease; /* Efeito suave de transformação */
+}
+
+.top-logo img:hover {
+    transform: scale(1.1); /* Aumenta o tamanho da logo ao passar o mouse */
+}
+
+.top-logo .slogan {
+    color: #fff; /* Cor branca do slogan */
+    text-align: center; /* Centraliza o texto do slogan */
+    font-family: 'Georgia', serif; /* Define uma nova fonte para o slogan */
+    margin-top: 10px; /* Espaço acima do slogan */
+    max-width: 80%; /* Limita a largura máxima para melhorar a legibilidade */
+    font-size: 1.5em; /* Ajusta o tamanho da fonte do slogan */
+    font-weight: bold; /* Define o texto como negrito */
+    line-height: 1.4; /* Ajusta a altura da linha para melhorar a legibilidade */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Adiciona uma sombra ao texto */
+}
+
+/* Estilização do conteúdo principal */
+main {
+    padding: 20px;
+}
+
+.content-container {
+    margin-bottom: 80px; /* Espaço inferior maior */
+}
+
+.content {
+    display: flex; /* Usa flexbox para o layout */
+    align-items: flex-start; /* Alinha os itens no topo */
+    background-color: rgba(240, 240, 240, 0.8); /* Fundo cinza claro e transparente */
+    border-radius: 15px; /* Bordas arredondadas */
+    padding: 30px; /* Espaçamento interno maior */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+    max-width: 1200px; /* Largura máxima dos containers */
+    margin: 0 auto; /* Centraliza o container horizontalmente */
+}
+
+.content img {
+    width: 720px; /* Aumenta a largura da imagem em 50% em relação ao tamanho original de 480px */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-right: 30px; /* Espaço à direita da imagem */
+    flex-shrink: 0; /* Impede que a imagem encolha */
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column; /* Alinha os itens verticalmente */
+    max-width: calc(100% - 760px); /* Ajusta a largura do texto para o espaço restante, incluindo a nova largura da imagem */
+}
+
+h1, h2 {
+    color: #00458f;
+    text-align: left; /* Alinha os títulos à esquerda dentro dos containers */
+    margin: 0 0 15px 0; /* Adiciona espaço abaixo dos títulos e remove a margem superior */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra sutil ao texto */
+}
+
+h1 {
+    font-size: 2em; /* Tamanho da fonte do título principal ajustado */
+}
+
+h2 {
+    font-size: 1.75em; /* Tamanho da fonte dos subtítulos ajustado */
+}
+
+p {
+    text-align: justify; /* Justifica o texto dentro dos containers */
+    margin: 0 0 15px 0; /* Adiciona mais espaço abaixo dos parágrafos e remove a margem superior */
+    font-size: 1em; /* Ajusta o tamanho da fonte dos parágrafos */
+}
+
+/* Estilização do rodapé */
+footer {
+    background-color: rgba(84, 84, 255, 0.349); /* Cor de fundo do rodapé */
+    color: #fff; /* Cor do texto */
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Faz com que o rodapé não sobreponha outros elementos */
+}
+
+footer p {
+    margin: 0;
+}
+
+footer .instagram-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #fff; /* Cor do link */
+    text-decoration: none;
+    font-weight: bold; /* Fonte em negrito */
+}
+
+footer .instagram-link:hover {
+    text-decoration: underline;
+}
