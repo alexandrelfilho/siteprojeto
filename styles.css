@@ -1,10 +1,8 @@
-/* Reset básico */
 body, h1, h2, p {
     margin: 0;
     padding: 0;
 }
 
-/* Adiciona um pseudo-elemento para a imagem de fundo com opacidade */
 body::before {
     content: "";
     position: fixed;
@@ -14,42 +12,40 @@ body::before {
     height: 100%;
     background: url('triviumfundo.png') no-repeat center center;
     background-size: cover;
-    opacity: 0.5; /* Define a opacidade da imagem de fundo para 50% */
-    z-index: -1; /* Garante que o pseudo-elemento fique atrás do conteúdo */
+    opacity: 0.5;
+    z-index: -1;
 }
 
-/* Estilização do corpo */
 body {
-    font-family: 'Open Sans', sans-serif; /* Fonte geral */
+    font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: rgba(240, 240, 240, 0.8); /* Cor de fundo adicional com opacidade de 80% */
-    font-size: 16px; /* Tamanho da fonte global ajustado para ser um pouco menor */
-    scroll-behavior: smooth; /* Adiciona rolagem suave */
+    background-color: rgba(240, 240, 240, 0.8);
+    font-size: 16px;
+    scroll-behavior: smooth;
 }
 
-/* Estilização do cabeçalho */
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px 20px;
-    background-color: rgba(84, 84, 255, 0.349); /* Cor de fundo do cabeçalho */
+    background-color: rgba(84, 84, 255, 0.349);
     color: #fff;
-    position: fixed; /* Fixar o cabeçalho no topo da tela */
-    width: 100%; /* Largura total da tela */
+    position: fixed;
+    width: 100%;
     top: 0;
     left: 0;
-    z-index: 1000; /* Garante que o cabeçalho fique sobre outros elementos */
-    backdrop-filter: blur(5px); /* Adiciona um efeito de desfoque no fundo do cabeçalho */
+    z-index: 1000;
+    backdrop-filter: blur(5px);
 }
 
 .sidebar {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    width: 100%; /* Largura total para garantir que os itens fiquem centralizados */
-    padding: 5px 0; /* Reduz o padding para um cabeçalho mais fino */
+    width: 100%;
+    padding: 5px 0;
 }
 
 .sidebar ul {
@@ -57,123 +53,121 @@ header {
     padding: 0;
     margin: 0;
     display: flex;
-    align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: center;
+    align-items: center;
 }
 
 .sidebar ul li {
-    margin: 0 15px; /* Espaçamento maior entre os links */
+    margin: 0 15px;
 }
 
 .sidebar ul li a {
-    color: #fff; /* Cor branca dos links */
+    color: #fff;
     text-decoration: none;
     padding: 1em;
-    font-size: 1em; /* Tamanho da fonte ajustado */
-    font-weight: bold; /* Fonte em negrito */
-    transition: transform 0.3s ease, color 0.3s ease; /* Efeito suave de transformação e cor */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Adiciona sombra ao texto do cabeçalho */
+    font-size: 1em;
+    font-weight: bold;
+    transition: transform 0.3s ease, color 0.3s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .sidebar ul li a:hover {
     text-decoration: underline;
-    transform: scale(1.1); /* Aumenta o tamanho do link ao passar o mouse */
+    transform: scale(1.1);
 }
 
-/* Estilização da logo e slogan */
 .top-logo {
     display: flex;
-    flex-direction: column; /* Adiciona o slogan abaixo da logo */
-    align-items: center; /* Centraliza os itens horizontalmente */
-    padding: 70px 0 20px; /* Adiciona espaço abaixo da logo */
-    background: none; /* Remove o fundo da barra */
+    flex-direction: column;
+    align-items: center;
+    padding: 70px 0 20px;
+    background: none;
 }
 
 .top-logo img {
-    height: auto; /* Mantém a proporção da imagem */
-    max-height: 288px; /* Reduz o tamanho máximo da logo para 20% menor */
-    width: auto; /* Ajusta a largura automaticamente para manter a proporção */
-    border-radius: 50%; /* Adiciona borda circular à logo */
-    border: 5px solid #fff; /* Adiciona uma borda branca à logo */
-    transition: transform 0.3s ease; /* Efeito suave de transformação */
+    height: auto;
+    max-height: 288px;
+    width: auto;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    transition: transform 0.3s ease;
 }
 
 .top-logo img:hover {
-    transform: scale(1.1); /* Aumenta o tamanho da logo ao passar o mouse */
+    transform: scale(1.1);
 }
 
 .top-logo .slogan {
-    color: #fff; /* Cor branca do slogan */
-    text-align: center; /* Centraliza o texto do slogan */
-    font-family: 'Georgia', serif; /* Define uma nova fonte para o slogan */
-    margin-top: 10px; /* Espaço acima do slogan */
-    max-width: 80%; /* Limita a largura máxima para melhorar a legibilidade */
-    font-size: 1.5em; /* Ajusta o tamanho da fonte do slogan */
-    font-weight: bold; /* Define o texto como negrito */
-    line-height: 1.4; /* Ajusta a altura da linha para melhorar a legibilidade */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Adiciona uma sombra ao texto */
+    color: #fff;
+    text-align: center;
+    font-family: 'Georgia', serif;
+    margin-top: 10px;
+    max-width: 80%;
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 1.4;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-/* Estilização do conteúdo principal */
 main {
     padding: 20px;
 }
 
 .content-container {
-    margin-bottom: 80px; /* Espaço inferior maior */
+    margin-bottom: 80px;
 }
 
 .content {
-    display: flex; /* Usa flexbox para o layout */
-    align-items: flex-start; /* Alinha os itens no topo */
-    background-color: rgba(240, 240, 240, 0.8); /* Fundo cinza claro e transparente */
-    border-radius: 15px; /* Bordas arredondadas */
-    padding: 30px; /* Espaçamento interno maior */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
-    max-width: 1200px; /* Largura máxima dos containers */
-    margin: 0 auto; /* Centraliza o container horizontalmente */
+    display: flex;
+    align-items: flex-start;
+    background-color: rgba(240, 240, 240, 0.8);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .content img {
-    width: 720px; /* Aumenta a largura da imagem em 50% em relação ao tamanho original de 480px */
-    height: auto; /* Mantém a proporção da imagem */
-    margin-right: 30px; /* Espaço à direita da imagem */
-    flex-shrink: 0; /* Impede que a imagem encolha */
+    width: 720px;
+    height: auto;
+    margin-right: 30px;
+    flex-shrink: 0;
 }
 
 .text-content {
     display: flex;
-    flex-direction: column; /* Alinha os itens verticalmente */
-    max-width: calc(100% - 760px); /* Ajusta a largura do texto para o espaço restante, incluindo a nova largura da imagem */
+    flex-direction: column;
+    max-width: calc(100% - 760px);
 }
 
 h1, h2 {
     color: #00458f;
-    text-align: left; /* Alinha os títulos à esquerda dentro dos containers */
-    margin: 0 0 15px 0; /* Adiciona espaço abaixo dos títulos e remove a margem superior */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra sutil ao texto */
+    text-align: left;
+    margin: 0 0 15px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 h1 {
-    font-size: 2em; /* Tamanho da fonte do título principal ajustado */
+    font-size: 2em;
 }
 
 h2 {
-    font-size: 1.75em; /* Tamanho da fonte dos subtítulos ajustado */
+    font-size: 1.75em;
 }
 
 p {
-    text-align: justify; /* Justifica o texto dentro dos containers */
-    margin: 0 0 15px 0; /* Adiciona mais espaço abaixo dos parágrafos e remove a margem superior */
-    font-size: 1em; /* Ajusta o tamanho da fonte dos parágrafos */
+    text-align: justify;
+    margin: 0 0 15px 0;
+    font-size: 1em;
 }
 
-/* Estilização do rodapé */
 footer {
-    background-color: rgba(84, 84, 255, 0.349); /* Cor de fundo do rodapé */
-    color: #fff; /* Cor do texto */
+    background-color: rgba(84, 84, 255, 0.349);
+    color: #fff;
     padding: 20px;
     text-align: center;
-    position: relative; /* Faz com que o rodapé não sobreponha outros elementos */
+    position: relative;
 }
 
 footer p {
@@ -183,11 +177,105 @@ footer p {
 footer .instagram-link {
     display: inline-block;
     margin-top: 10px;
-    color: #fff; /* Cor do link */
+    color: #fff;
     text-decoration: none;
-    font-weight: bold; /* Fonte em negrito */
+    font-weight: bold;
 }
 
 footer .instagram-link:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 1287px) {
+    .top-logo img {
+        max-height: 200px;
+    }
+
+    .top-logo .slogan {
+        font-size: 1.2em;
+        max-width: 100%;
+    }
+
+    .content {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .content img {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .text-content {
+        max-width: 100%;
+    }
+
+    .text-content p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 860px) {
+    .sidebar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar ul li {
+        margin: 10px 0;
+    }
+
+    header {
+        padding: 5px 10px;
+    }
+
+    .sidebar ul {
+        padding: 0;
+    }
+
+    .sidebar ul li {
+        margin: 5px 0;
+    }
+
+    .top-logo {
+        padding: 220px 0 20px;
+    }
+
+    .top-logo img {
+        max-height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-logo img {
+        max-height: 150px;
+    }
+
+    .top-logo .slogan {
+        font-size: 1em;
+        max-width: 90%;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .content img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .text-content {
+        font-size: 0.9em;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
 }
