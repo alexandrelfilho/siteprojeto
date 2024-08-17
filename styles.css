@@ -162,15 +162,21 @@ p {
     font-size: 1em;
 }
 
+
 footer {
     background-color: rgba(84, 84, 255, 0.349);
     color: #fff;
-    padding: 20px;
+    padding-bottom: 16px;
     text-align: center;
     position: relative;
 }
 
+footer a img {
+    width: 40px;
+}
+
 footer p {
+    text-align: center;
     margin: 0;
 }
 
